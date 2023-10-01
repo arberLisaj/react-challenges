@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.parent {
+  background-color: tomato;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.child {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+.buttons {
+  position: absolute;
+  z-index: 999999;
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
