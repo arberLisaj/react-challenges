@@ -4,8 +4,7 @@ import hexGenerator from "./hexGenerator";
 const App = () => {
   const [color, setColor] = useState("");
   const [answers, setAnswers] = useState<string[]>([]);
-  const [isRight, setRight] = useState(false);
-  const [isWrong, setWrong] = useState(false);
+  const [isCorrect, setIsCorrect] = useState<boolean | undefined>(undefined);
 
   const generateColor = () => {
     const color = hexGenerator();
@@ -22,20 +21,18 @@ const App = () => {
   const handleClick = (answer: string) => {
     if (answer === color) {
       generateColor();
-      setRight(true);
-      setWrong(false);
+      setIsCorrect(true);
     } else {
-      setRight(false);
-      setWrong(true);
+      setIsCorrect(false);
     }
   };
 
   return (
     <main>
-      {isWrong && <p className="snackbar">Wrong!</p>}
-      {isRight && (
-        <p className="snackbar" style={{ backgroundColor: "#29AB87" }}>
-          Correct!
+      {isCorrect === false && <p className="snackbar">Wrong !</p>}
+      {isCorrect === true && (
+        <p className="snackbar" style={{ background: "#29AB87" }}>
+          Correct !
         </p>
       )}
       <section className="container">
