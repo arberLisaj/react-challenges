@@ -3,8 +3,8 @@ import { useState } from "react";
 import { useRef } from "react";
 
 const App = () => {
-  const [todos, setTodos] = useState(() =>
-    JSON.parse(localStorage.getItem("todos"))
+  const [todos, setTodos] = useState(
+    () => JSON.parse(localStorage.getItem("todos")) || []
   );
 
   useEffect(() => {
