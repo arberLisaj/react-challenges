@@ -70,3 +70,8 @@ ul li button {
   padding: 10px 22px;
   cursor: pointer;
 }
+.addtodo{
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 14px;
+}

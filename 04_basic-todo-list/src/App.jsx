@@ -35,19 +35,23 @@ const App = () => {
           ref={inputRef}
           autoFocus
           required
-          placeholder="add todo..."
+          placeholder="Add todo..."
         />
         <button type="submit">Create</button>
       </form>
 
-      <ul>
-        {todos.map((t) => (
-          <li key={t.id}>
-            <p>{t.text}</p>
-            <button onClick={() => handleDeleteTodo(t.id)}>delete</button>
-          </li>
-        ))}
-      </ul>
+      {!todos.length == 0 ? (
+        <ul>
+          {todos.map((t) => (
+            <li key={t.id}>
+              <p>{t.text}</p>
+              <button onClick={() => handleDeleteTodo(t.id)}>delete</button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="addtodo">Add your first todo.</p>
+      )}
     </main>
   );
 };
