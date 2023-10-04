@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+main {
+  max-width: fit-content;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+div {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+label {
+  text-transform: capitalize;
+}
+p {
+  margin-top: 10px;
+}
+p span {
+  font-weight: bold;
+  font-size: 18px;
+}

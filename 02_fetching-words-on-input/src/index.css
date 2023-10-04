@@ -5,11 +5,11 @@
   word-break: break-all;
 }
 body {
-  background-color: #1a1a1ada;
+  background-color: #131212;
   color: white;
 }
 main {
-  max-width: 1200px;
+  max-width: 900px;
   margin-inline: auto;
   padding: 20px;
 }
