@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  padding: 10px;
+}
+main {
+  width: 100%;
+  max-width: 700px;
+  margin-inline: auto;
+  margin-block: 50px;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+form input {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border: none;
+  background-color: rgba(211, 211, 211, 0.5);
+  border-radius: 4px 0 0 4px;
+}
+form button {
+  background-color: rgb(1, 163, 1);
+  color: white;
+  border: none;
+  border-radius: 0px 4px 4px 0px;
+  padding-inline: 20px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.7;
+}
+button:active {
+  opacity: 1;
+}
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+ul li {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background-color: rgba(231, 231, 231, 0.643);
+  justify-content: space-between;
+  margin-block: 5px;
+  overflow: hidden;
+}
+ul li:nth-of-type(even) {
+  background-color: rgba(231, 231, 231, 0.355);
+}
+ul li p {
+  font-size: 14px;
+  word-break: break-all;
+  padding: 5px 10px;
+}
+ul li button {
+  background-color: rgba(231, 48, 48, 0.84);
+  color: white;
+  height: 100%;
+  display: block;
+  border: none;
+  padding: 10px 22px;
+  cursor: pointer;
+}
