@@ -1,5 +1,5 @@
 |  #  | Name / Repo                                            | Description                                                                                 |
-| :-: | ------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| :-: | :----------------------------------------------------- | :------------------------------------------------------------------------------------------ |
 | 01  | [click tracker](/01_click-tracker)                     | Mouse click tracker with the functionality to undo and redo changes.                        |
 | 02  | [fetching words on input](/02_fetching-words-on-input) | Fetching nouns that are often described by the adjective we insert in the searchbox.        |
 | 03  | [hex finder game](/03_hex-finder-game)                 | A colored box and 3 options are displayed , choose the correct answer.                      |
