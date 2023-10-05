@@ -6,3 +6,4 @@
 | 04  | [basic todo list](/04_basic-todo-list)                 | Basic todo list that allows you to create & delete todos. Todos are stored in localstorage. |
 | 05  | [image carousel](/05_image-carousel)                   | This carousel allows the user to navigate to the previous or next image.                    |
 | 06  | [bmi calculator](/06_bmi-calculator)                   | BMI Calculator built with input type range.                                                 |
+| 07  | [timer ](/07_timer)                                    | React timer.                                                                                |
