@@ -6,5 +6,6 @@
 | 04  | [todo list](/04_basic-todo-list)                       | Basic todo list that allows you to create & delete todos. Todos are stored in localstorage.                 |
 | 05  | [image carousel](/05_image-carousel)                   | This carousel allows the user to navigate to the previous or next image.                                    |
 | 06  | [bmi calculator](/06_bmi-calculator)                   | BMI Calculator built with input type range.                                                                 |
-| 07  | [timer ](/07_timer)                                    | Creating a basic timer with react that allows user to enter , pause and reset the timer.                    |
-| 08  | [user-authentication](/08_user-authentication)         | Login form that allows user to login via a default password and disabling the button on various conditions. |
+| 07  | [countdown timer](/07_countdown-timer)                 | Creating a basic timer with react that allows user to enter , pause and reset the timer.                    |
+| 08  | [user login form](/08_user-login-form)                 | Login form that allows user to login via a default password and disabling the button on various conditions. |
+| 09  | [nested folder structure](/09_nested-folder-structure) | Creating a nested folder structure using Recursion.                                                         |
