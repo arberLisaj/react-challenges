@@ -9,3 +9,4 @@
 | 07  | [countdown timer](/07_countdown-timer)                 | Creating a basic timer with react that allows user to enter , pause and reset the timer.                    |
 | 08  | [user login form](/08_user-login-form)                 | Login form that allows user to login via a default password and disabling the button on various conditions. |
 | 09  | [nested folder structure](/09_nested-folder-structure) | Creating a nested folder structure using Recursion.                                                         |
+| 10  | [tic tac toe](/10_tic-tac-toe)                         | Building a tic tac toe game with react. You can time travel to each move                                    |
