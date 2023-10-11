@@ -1,4 +1,4 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import searches from "./searches";
 
 const Store = () => {
@@ -7,12 +7,12 @@ const Store = () => {
   const filteredItems = searches.filter((s) =>
     s.toLowerCase().includes(q.toLowerCase())
   );
-
   return (
-    <div>
-      <Link to="/">Home</Link>
+    <section>
       <input
-        type="text"
+        autoFocus
+        name="searchbar"
+        type="search"
         onChange={(e) =>
           setSearchParams(
             (prev) => {
@@ -28,7 +28,7 @@ const Store = () => {
           <li key={index}>{item}</li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
