@@ -1,5 +1,12 @@
+import { Link } from "react-router-dom";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <h1>Home</h1>
+      <Link to="/store">store</Link>
+    </>
+  );
 };
 
 export default App;
