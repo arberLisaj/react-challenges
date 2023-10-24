@@ -1,35 +1,77 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import holeImage from "./images/hole.png";
+import moleImage from "./images/mole.png";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [moles, setMoles] = useState(new Array(9).fill(false));
+  const [score, setScore] = useState(0);
+  const [difficulty, setDifficulty] = useState("easy");
+  const delay =
+    difficulty === "easy" ? 1000 : difficulty === "medium" ? 800 : 600;
+
+  useEffect(() => {
+    setScore(0);
+  }, [difficulty]);
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * moles.length);
+    const interval = setInterval(() => {
+      showMole(randomIndex);
+      setTimeout(() => {
+        hideMole(randomIndex);
+      }, delay - 200);
+    }, delay);
+    return () => clearInterval(interval);
+  }, [moles, difficulty]);
+
+  function showMole(index: number) {
+    setMoles((currentMoles) => {
+      const newMoles = [...currentMoles];
+      newMoles[index] = true;
+      return newMoles;
+    });
+  }
+
+  function hideMole(index: number) {
+    setMoles((currentMoles) => {
+      const newMoles = [...currentMoles];
+      newMoles[index] = false;
+      return newMoles;
+    });
+  }
+
+  function whackMole(index: number) {
+    if (!moles[index]) return;
+    hideMole(index);
+    setScore((s) => s + 1);
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main>
+      <header>
+        <h1>score: ({score})</h1>
+        <select
+          value={difficulty}
+          onChange={(e) => setDifficulty(e.target.value)}
+        >
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </header>
+      <section>
+        {moles.map((m, index) => (
+          <img
+            draggable={false}
+            key={index}
+            src={m ? moleImage : holeImage}
+            onClick={() => whackMole(index)}
+            alt="whac a mole"
+          />
+        ))}
+      </section>
+    </main>
+  );
 }
 
-export default App
+export default App;
