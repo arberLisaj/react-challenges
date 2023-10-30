@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import questions from "./questions";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState("");
+  const [score, setScore] = useState(0);
+
+  const isGameOver = currentQuestionIndex >= questions.length;
+  const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      {isGameOver ? (
+        <>
+          <h1>Game over {score}</h1>
+        </>
+      ) : (
+        <>
+          <h1>{currentQuestion.prompt}</h1>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (selectedAnswer === currentQuestion.correctAnswer)
+                setScore((s) => s + 1);
 
-export default App
+              setCurrentQuestionIndex((q) => q + 1);
+            }}
+          >
+            {
+              // .sort(() => 0.5 - Math.random())
+              currentQuestion.answers.map((a, index) => (
+                <label key={index}>
+                  <input
+                    required
+                    onChange={() => setSelectedAnswer(a)}
+                    type="radio"
+                    name="answer"
+                    value={a}
+                  />
+                  {a}
+                </label>
+              ))
+            }
+            <button>submit</button>
+          </form>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default App;
