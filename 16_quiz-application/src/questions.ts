@@ -6,14 +6,19 @@ type Question = {
 
 const questions: Question[] = [
   {
-    prompt: "what color is the sky",
+    prompt: "What color is the sky?",
     correctAnswer: "blue",
     answers: ["blue", "red", "orange", "yellow"],
   },
   {
-    prompt: "what color is the grass",
+    prompt: "What color is the grass?",
     correctAnswer: "green",
     answers: ["blue", "green", "orange", "yellow"],
+  },
+  {
+    prompt: "What gives earth heat?",
+    correctAnswer: "the sun",
+    answers: ["grass", "trees", "the sun", "the moon"],
   },
 ];
 
