@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+}
+body {
+  padding: 10px;
+}
+main {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+main .main-header {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+section.question {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid gainsboro;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid gainsboro;
+}
+header button span {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  background-color: black;
+}
+header button span:nth-of-type(2) {
+  transform: rotate(90deg);
+  left: 25%;
+}
+h1.question {
+  padding: 2px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(0, 0, 65);
+}
+
+p.answer {
+  margin-top: 10px;
+  padding: 8px 2px 0px;
+  border-top: 1px solid gainsboro;
+  color: #474747;
+}
+.hide {
+  display: none;
+}
