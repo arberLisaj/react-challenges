@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  padding: 10px;
+}
+fieldset {
+  max-width: fit-content;
+  padding: 10px;
+  border-radius: 4px;
+}
+fieldset button {
+  padding: 3px 10px;
+  cursor: pointer;
+}
+fieldset div {
+  border-top: 1px solid gainsboro;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 10px;
+  margin-top: 10px;
+  gap: 5px;
+}
+fieldset div label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
